@@ -39,6 +39,7 @@ pub fn build(b: *std.Build) void {
     exe.linkFramework("QuartzCore");
     exe.linkFramework("ColorSync");
     exe.linkFramework("Metal");
+    exe.linkFramework("MetalPerformanceShaders");
     exe.linkFramework("MetalKit");
     exe.linkFramework("ImageIO");
     exe.linkFramework("CFNetwork");

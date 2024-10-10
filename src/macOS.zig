@@ -38,6 +38,11 @@ fn checkMetalCompatibility() !bool {
     if (metalDevice.value == null) {
         return false;
     }
+    const info = MPSSupportsMTLDevice();
+    std.log.debug("MPSSupportsMTLDevice: {any}", .{info});
+    if (!info) {
+        return false;
+    }
 
     const queue = metalDevice.msgSend(objc.Object, objc.sel("newCommandQueue"), .{});
 
@@ -91,6 +96,7 @@ const NSOperatingSystemVersion = extern struct {
 };
 
 extern "c" fn MTLCreateSystemDefaultDevice() ?*anyopaque;
+extern "c" fn MPSSupportsMTLDevice() bool;
 
 // Add these constants and structs
 const MTLPixelFormatBGRA8Unorm: c_uint = 80;
