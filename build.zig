@@ -40,7 +40,6 @@ pub fn build(b: *std.Build) void {
     exe.linkFramework("ColorSync");
     exe.linkFramework("Metal");
     exe.linkFramework("MetalKit");
-    exe.linkFramework("MPSKernel");
     exe.linkFramework("ImageIO");
     exe.linkFramework("CFNetwork");
     exe.linkSystemLibrary(
