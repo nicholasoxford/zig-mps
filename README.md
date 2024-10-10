@@ -37,3 +37,10 @@ git clone https://github.com/nicholasoxford/zig-mps.git
 cd zig-mps
 zig build run
 ```
+
+### Expected output
+
+```bash
+debug: Metal rendering completed successfully
+System is compatible with required macOS version and supports Metal
+```
